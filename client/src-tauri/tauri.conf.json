@@ -2,11 +2,11 @@
   "build": {
     "beforeDevCommand": "npm run dev",
     "beforeBuildCommand": "npm run build",
-    "devPath": "http://localhost:1420",
+    "devPath": "http://localhost:3000",
     "distDir": "../dist"
   },
   "package": {
-    "productName": "EmployeeFrontend",
+    "productName": "SprintVSandbox",
     "version": "0.0.0"
   },
   "tauri": {
@@ -21,7 +21,7 @@
       {
         "fullscreen": false,
         "resizable": true,
-        "title": "TeamTrack",
+        "title": "SprintVSandBox",
         "width": 800,
         "height": 600
       }

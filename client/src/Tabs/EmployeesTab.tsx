@@ -19,17 +19,17 @@ type User = {
 };
 
 // Code to use Later
-function fetcher(){
-  const [items,setItems]=useState()
-  useEffect(() => {
-    const fetchItems = async () => {
-      const response = await axios.get('https://api.example.com/items');
-      setItems(response.data);
-    };
-    
-    fetchItems();
-  }, []);
-}
+// function fetcher(){
+//   // const [items,setItems]=useState()
+//   useEffect(() => {
+//     const fetchItems = async () => {
+//       const response = await axios.get('https://api.example.com/items');
+//       setItems(response.data);
+//     };
+//
+//     fetchItems();
+//   }, []);
+// }
 // Code to be used Later ends here
 const columnHelper = createColumnHelper<User>();
 const columns = [

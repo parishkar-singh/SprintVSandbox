@@ -1,23 +1,15 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { LuSunMoon } from "react-icons/lu";
+import {toggleTheme} from "@/Redux/Actions.ts";
 
 const DarkModeButton = () => {
-    const [theme, setTheme] = useState('light');
+    const dispatch = useDispatch();
 
-    useEffect(() => {
-        if (theme === 'dark') {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
-    }, [theme]);
-
-    const handleThemeSwitch = (e:any) => {
-        e.stopPropagation();
-        e.preventDefault();
-        setTheme(theme === 'dark' ? 'light' : 'dark');
+    const handleThemeSwitch = () => {
+        dispatch(toggleTheme());
     };
+
 
     return (
         <motion.button

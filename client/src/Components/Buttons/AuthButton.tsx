@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { invoke } from '@tauri-apps/api/tauri';
+import React from "react";
 
 interface AuthButtonProps {
   text: string;
@@ -8,7 +8,7 @@ interface AuthButtonProps {
   href?: string;
 }
 
-const AuthButton: React.FC<AuthButtonProps> = ({ href, text, sidebar, ButtonClass }) => {
+const AuthButton: React.FC<AuthButtonProps> = ({ href, text, ButtonClass }) => {
   const handleClick = () => {
     if (href) {
       window.location.href = href;
@@ -17,7 +17,7 @@ const AuthButton: React.FC<AuthButtonProps> = ({ href, text, sidebar, ButtonClas
   return (
     <motion.button
       onClick={handleClick}
-      className={`rounded-3xl ${ButtonClass} bg-blue-500 transition duration-100 hover:bg-yellow-600 h-12 p-2 px-6 font-semibold `}
+      className={`rounded-3xl ${ButtonClass} bg-green-600 transition duration-100 hover:bg-yellow-600 h-12 p-2 px-6 font-semibold `}
       whileHover={{ scale: 1.17 }}
       whileTap={{ scale: 0.9 }}
     >
