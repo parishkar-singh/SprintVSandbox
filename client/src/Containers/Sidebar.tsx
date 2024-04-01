@@ -3,7 +3,7 @@ import { useDispatch} from "react-redux";
 import Button from "../Components/Buttons/Button";
 import { setActiveTab } from "@/Redux/Actions.ts";
 
-const Sidebar: React.FC = () => {
+const Sidebar: React.FC = React.memo(() => {
     const dispatch = useDispatch();
 
     const handleSetActiveTab = (tabName: string) => {
@@ -28,6 +28,6 @@ const Sidebar: React.FC = () => {
             {/*<div>Active Tab: {activeTab}</div> /!* Displaying active tab *!/*/}
         </div>
     );
-};
+});
 
 export default Sidebar;
