@@ -4,11 +4,11 @@ import { cn } from "@/Utils/cn.ts";
 export const BackgroundGradientAnimation = ({
                                                 gradientBackgroundStart = "rgb(0,0,0)",
                                                 gradientBackgroundEnd = "rgb(0,0,0)",
-                                                firstColor = "18, 113, 255",
+                                                firstColor = "90, 113, 255",
                                                 secondColor = "221, 74, 255",
                                                 thirdColor = "100, 220, 255",
                                                 fourthColor = "255, 100, 100",
-                                                fifthColor = "255, 255, 0",
+                                                fifthColor = "255, 165, 0",   // Orange
                                                 pointerColor = "140, 100, 255",
                                                 size = "80%",
                                                 blendingValue = "hard-light",
@@ -80,13 +80,12 @@ export const BackgroundGradientAnimation = ({
     return (
         <div className={cn("h-screen w-screen relative overflow-hidden top-0 left-0", `bg-[linear-gradient(40deg,${gradientBackgroundStart},${gradientBackgroundEnd})]`, containerClassName)}>
             <div className={cn("", className)}>{children}</div>
-            <div className={cn("gradients-container h-full w-full blur-lg", isSafari ? "blur-2xl" : "[filter:url(#blurMe)_blur(40px)]")}>
+            <div className={cn("gradients-container h-full w-full   -lg", isSafari ? "  -2xl" : "[filter:url(#  Me)_  (40px)]")}>
                 {/* SVG Definitions */}
                 <svg className="hidden">
                     <defs>
-                        <filter id="blurMe">
-                            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                        <filter id="szMe">
+                            <feColorMatrix in="  " mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
                             <feBlend in="SourceGraphic" in2="goo" />
                         </filter>
                     </defs>
