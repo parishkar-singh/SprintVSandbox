@@ -6,7 +6,7 @@ async function Mongo() {
     const dbURI = config.get<string>('dbURI');
     try {
         await mongoose.connect(dbURI);
-        Logger.database('Mongo AWS Connected');
+        Logger.database('MongoDB Connected');
     } catch (err) {
         Logger.database('Database connection error');
         process.exit(1);

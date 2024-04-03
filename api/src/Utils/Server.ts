@@ -1,4 +1,4 @@
-import express from "express";
+import express, {Express} from "express";
 import deSerializeUser from "../Middleware/deserializeUser";
 import routes from "../routes";
 import cors from "cors";
@@ -6,7 +6,7 @@ import config from "config";
 import cookieParser from "cookie-parser";
 
 function createServer(){
-    const app = express();
+    const app:Express = express();
     //The order of execution of Middleware is important
     app.use(cors({
         origin: [config.get<string>('origin'),'http://localhost:3000','http://localhost:3001',`http://127.0.0.1` ,'http://127.0.0.1:1430'],
