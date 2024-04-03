@@ -19,8 +19,9 @@ import config from 'config';
 import Mongo from "@/Utils/Mongo";
 import Logger from "@/Utils/Logger";
 import ExpressServer from "@/Utils/Server";
+import {Express} from "express";
 
-const app = ExpressServer()
+const app:Express = ExpressServer()
 app?.listen(config.get<number>('port'), async () => {
     const Domain = config.get<string>('domain');
     Logger.express(`Server Online`);
