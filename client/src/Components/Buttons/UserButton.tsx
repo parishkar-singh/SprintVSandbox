@@ -12,7 +12,7 @@ interface UserButtonProps {
 const UserButton: React.FC<UserButtonProps> = ({ href, text, sidebar, ButtonClass, onClick }) => {
   const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
     if (href) {
-      console.log('href auth routes is called')
+      console.log('href auth Routes is called')
       window.location.href = href;
     }
 

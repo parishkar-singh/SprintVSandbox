@@ -1,6 +1,6 @@
 import {Request, Response} from 'express';
-import logger from "../utils/logger";
-import {createUpdate, findAllVersions, findLatestVersion} from "../service/update.service";
+import logger from "../Utils/Logger";
+import {createUpdate, findAllVersions, findLatestVersion} from "../Services/update.service";
 
 export const getUpdateHandler = async (req: Request, res: Response) => {
     try {

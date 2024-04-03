@@ -1,17 +1,16 @@
 import mongoose from 'mongoose';
 import config from "config";
-import logger from './logger';
+import Logger from '@/Utils/Logger';
 
-async function connect() {
+async function Mongo() {
     const dbURI = config.get<string>('dbURI');
     try {
         await mongoose.connect(dbURI);
-        logger.info('Mongo AWS ');
+        Logger.database('Mongo AWS Connected');
     } catch (err) {
-        console.error(err);
-        logger.error('Could not connect to database');
+        Logger.database('Database connection error');
         process.exit(1);
     }
 }
 
-export default connect;
+export default Mongo;

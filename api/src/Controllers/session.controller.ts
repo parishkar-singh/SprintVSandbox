@@ -1,8 +1,8 @@
 import {CookieOptions, Request, Response} from "express";
-import {createSession, findSessions, updateSession} from "../service/session.service";
+import {createSession, findSessions, updateSession} from "../Services/session.service";
 import config from "config";
-import {signJWT} from "../utils/jwt.utils";
-import {findAndUpdateUser, getGoogleOauthTokens, getGoogleUser, validatePassword} from "../service/user.service";
+import {signJWT} from "../Utils/jwt.utils";
+import {findAndUpdateUser, getGoogleOauthTokens, getGoogleUser, validatePassword} from "../Services/user.service";
 
 const accessTokenCookieOptions: CookieOptions = {
     maxAge: 900000,

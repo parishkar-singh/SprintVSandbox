@@ -1,8 +1,8 @@
 import Express from "express";
-import validateResource from "../middleware/validateResource";
-import {createUserSchema, verifyUserSchema} from "../schema/user.schema";
-import {createUserHandler, deleteUserHandler, getCurrentUser, verifyUserHandler} from "../controller/user.controller";
-import requireUser from "../middleware/requireUser";
+import validateResource from "../Middleware/validateResource";
+import {createUserSchema, verifyUserSchema} from "../Schema/user.schema";
+import {createUserHandler, deleteUserHandler, getCurrentUser, verifyUserHandler} from "../Controllers/user.controller";
+import requireUser from "../Middleware/requireUser";
 
 const router = Express.Router();
 

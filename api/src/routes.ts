@@ -1,12 +1,12 @@
 import { Express, Router } from "express";
-import healthRoutes from "./routes/health.route";
-import userRoutes from "./routes/user.route";
-import sessionRoutes from "./routes/session.route";
-import updateRoutes from "./routes/update.route";
+import healthRoutes from "./Routes/health.route";
+import userRoutes from "./Routes/user.route";
+import sessionRoutes from "./Routes/session.route";
+import updateRoutes from "./Routes/update.route";
 function routes(app: Express) {
     const apiRouter = Router();
 
-    // Combine all the routes
+    // Combine all the Routes
     apiRouter.use('/health', healthRoutes);
     apiRouter.use('/users', userRoutes);
     apiRouter.use('/sessions', sessionRoutes);

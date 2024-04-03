@@ -1,6 +1,6 @@
 import config from "config";
 import jwt from "jsonwebtoken";
-import logger from "./logger";
+import logger from "./Logger";
 
 const privateKey: string = config.get('privateKey');
 const publicKey: string = config.get('publicKey');

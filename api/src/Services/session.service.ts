@@ -1,7 +1,7 @@
-import SessionModel, {SessionDocument} from "../models/session.model";
+import SessionModel, {SessionDocument} from "../Model/session.model";
 import {FilterQuery, UpdateQuery} from "mongoose";
 import {get} from 'lodash';
-import {signJWT, verifyJWT} from "../utils/jwt.utils";
+import {signJWT, verifyJWT} from "../Utils/jwt.utils";
 import {findUser} from "./user.service";
 import config from "config";
 

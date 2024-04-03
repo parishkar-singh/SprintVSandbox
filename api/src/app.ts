@@ -1,22 +1,33 @@
+
 /*
-TechStack->>  Node.js, Typescript, Express, MongoDB
-Deployment--> Docker, Docker-compose, EC2, Nginx, PM2
-*
+
 This file is the ❤ of the server 0_0
+
+Endpoints--> localhost:8080 | server.heydaw.ai | www.server.heydaw.ai
+
+TechStack ->>  NodeJS, Express, Typescript, Mongoose, Prisma, Stripe
+HTTP Client --> Axios, Octokit
+Deployment --> Docker, Docker-compose, EC2, Nginx, PM2
+
+To Run HTTP server On LocalHost: npm run dev
+To Run HTTPS server On EC2: npm run deploy
+
 */
 
+import 'module-alias/register';
 import config from 'config';
-import 'dotenv/config'
-import connect from './utils/connect';
-import createServer from "./utils/server";
-import logger from "./utils/logger";
-import * as os from "os";
+import Mongo from "@/Utils/Mongo";
+import Logger from "@/Utils/Logger";
+import ExpressServer from "@/Utils/Server";
 
-const app = createServer()
-app.get('/', (req, res) => {
-    res.send(`backend is running`);
-});
-app.listen(config.get<number>('port'), async () => {
-    logger.info(`Server Online @server.${config.get<string>('domain')}`);
-    await connect();
-});
+const app = ExpressServer()
+app?.listen(config.get<number>('port'), async () => {
+    const Domain = config.get<string>('domain');
+    Logger.express(`Server Online`);
+    await Mongo();
+    if (process.env.NODE_ENV === 'production') {
+        Logger.https(`https://${Domain}`);
+    } else {
+        Logger.http(`http://${Domain}:8080`);
+    }
+})

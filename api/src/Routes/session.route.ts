@@ -1,13 +1,13 @@
 import Express from "express";
-import validateResource from "../middleware/validateResource";
-import {createSessionSchema} from "../schema/session.schema";
+import validateResource from "../Middleware/validateResource";
+import {createSessionSchema} from "../Schema/session.schema";
 import {
     createUserSessionHandler,
     deleteSessionHandler,
     getUserSessionsHandler,
     googleOAuthHandler
-} from "../controller/session.controller";
-import requireUser from "../middleware/requireUser";
+} from "../Controllers/session.controller";
+import requireUser from "../Middleware/requireUser";
 
 // Routes
 const router = Express.Router();
