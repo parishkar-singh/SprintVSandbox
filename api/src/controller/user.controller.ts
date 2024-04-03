@@ -10,7 +10,7 @@ export async function createUserHandler(req: Request<{}, {}, CreateUserInput["bo
         await sendMail({
             from: "text@example.com",
             to: user.email,
-            subject: "Welcome to HeyDaw",
+            subject: "SprintV Sandbox",
             text: `Verify your email ${user.verificationCode} , Id: ${user._id}`,
         });
         return res.send(user);
