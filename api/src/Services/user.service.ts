@@ -1,10 +1,10 @@
-import UserModel, {UserDocument, UserInput} from "../models/user.model";
+import UserModel, {UserDocument, UserInput} from "../Model/user.model";
 import {omit} from "lodash";
 import config from "config";
 import qs from 'querystring'
 import {FilterQuery, QueryOptions, UpdateQuery} from "mongoose";
 import axios from "axios";
-import logger from "../utils/logger";
+import logger from "../Utils/Logger";
 
 interface GoogleTokenResult {
     access_token: string;

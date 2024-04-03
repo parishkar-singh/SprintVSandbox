@@ -1,5 +1,5 @@
 import Express from "express";
-import {getLatestUpdateHandler,createUpdateHandler,getUpdateHandler} from "../controller/update.controller";
+import {getLatestUpdateHandler,createUpdateHandler,getUpdateHandler} from "../Controllers/update.controller";
 // Routes
 const router = Express.Router();
 

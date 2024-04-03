@@ -1,7 +1,7 @@
 import config from "config";
-import updateModel from "../models/update.model";
-import { versionDTO, platform} from "../models/update.model";
-import UpdateModel from "../models/update.model";
+import updateModel from "../Model/update.model";
+import { versionDTO, platform} from "../Model/update.model";
+import UpdateModel from "../Model/update.model";
 
 export const findAllVersions = async (): Promise<versionDTO[]> => {
     const updates = await UpdateModel.find();

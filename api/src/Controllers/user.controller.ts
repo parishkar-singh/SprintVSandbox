@@ -1,8 +1,8 @@
 import {Request, Response} from "express";
-import logger from "../utils/logger";
-import {CreateUserInput, VerifyUserInput} from "../schema/user.schema";
-import {createUser, deleteAllUsers, findUser} from "../service/user.service";
-import sendMail from "../utils/mailer";
+import logger from "../Utils/Logger";
+import {CreateUserInput, VerifyUserInput} from "../Schema/user.schema";
+import {createUser, deleteAllUsers, findUser} from "../Services/user.service";
+import sendMail from "../Utils/Mailer";
 
 export async function createUserHandler(req: Request<{}, {}, CreateUserInput["body"]>, res: Response) {
     try {
@@ -10,7 +10,7 @@ export async function createUserHandler(req: Request<{}, {}, CreateUserInput["bo
         await sendMail({
             from: "text@example.com",
             to: user.email,
-            subject: "Welcome to HeyDaw",
+            subject: "SprintV Sandbox",
             text: `Verify your email ${user.verificationCode} , Id: ${user._id}`,
         });
         return res.send(user);

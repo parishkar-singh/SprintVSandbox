@@ -1,6 +1,6 @@
 import nodemailer, {SendMailOptions} from 'nodemailer';
 import config from "config";
-import logger from "./logger";
+import logger from "./Logger";
 
 // Generated a test account for nodemailer
 
