@@ -10,11 +10,11 @@ export default {
   theme: {
     extend: {
       animation: {
-        first: "moveVertical 30s ease infinite",
-        second: "moveInCircle 20s reverse infinite",
+        first: "moveVertical 40s ease infinite",
+        second: "moveInCircle 40s reverse infinite",
         third: "moveInCircle 40s linear infinite",
         fourth: "moveHorizontal 40s ease infinite",
-        fifth: "moveInCircle 20s ease infinite",
+        fifth: "moveInCircle 10s ease infinite",
       },
       keyframes: {
         moveHorizontal: {

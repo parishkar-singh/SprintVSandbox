@@ -70,7 +70,6 @@ const EmployeesTab: React.FC = () => {
   
   const table = useReactTable({ data,columns,getCoreRowModel:getCoreRowModel() });
   return (
-    
     <div className="w-full text-black dark:text-white flex flex-col p-2">
       <div className="flex justify-between items-center gap-2">
       <h1 className={`text-4xl py-2 font-bold text-yellow-500`}>Employees</h1>

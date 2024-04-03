@@ -1,9 +1,9 @@
 {
-  "name": "reaper",
+  "name": "ExpressApi",
   "version": "1.0.0",
-  "description": "Ai Music Generator",
+  "description": "template",
   "main": "src/app.ts",
-  "author": "Heydaw",
+  "author": "Parishkar",
   "license": "ISC",
   "private": true,
   "engines": {

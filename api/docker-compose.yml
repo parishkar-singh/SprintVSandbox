@@ -1,8 +1,8 @@
 version: "3.8"
 
 services:
-  heydawbackend:
-    container_name: heydawbackend
+  ExpressApi:
+    container_name: ExpressApi
     restart: unless-stopped
     environment:
       - NODE_ENV=production
