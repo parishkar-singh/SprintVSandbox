@@ -13,6 +13,7 @@ build
 node_modules
 /node_modules/
 .env
+/src/access.log
 dist
 dist-ssr
 *.local
